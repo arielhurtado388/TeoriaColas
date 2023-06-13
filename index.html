@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Calculadora Teoría Colas</title>
+  </head>
+  <body>
+    <div class="barra">
+      <div class="logo">
+        <i class="fa-solid fa-calculator fa-5x"></i>
+        <h1>Simulación <span>App</span></h1>
+      </div>
+      <i class="fa-solid fa-bars fa-5x" id="mobile-menu"></i>
+    </div>
+    <header>
+      <nav class="nav">
+        <a href="#" data-paso="1">Población Infinita Canal Simple (PICS)</a>
+        <a href="#" data-paso="2">Población Infinita Canal Múltiple (PICM)</a>
+        <a href="#" data-paso="3">Población Finita Canal Simple (PFCS)</a>
+        <a href="#" data-paso="4">Población Finita Canal Múltiple (PFCM)</a>
+      </nav>
+    </header>
+
+    <main id="paso-1" class="contenedor seccion">
+      <h2>Datos - M/M/1</h2>
+      <form action="" class="formulario">
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese λ"
+            id="lambda"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese µ"
+            id="mu"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese N"
+            id="n"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTE ($/h)"
+            id="cte"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTS ($/h)"
+            id="cts"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTSE ($/h)"
+            id="ctse"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CS ($/h)"
+            id="cs"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese las horas laborables en un día"
+            id="horas"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="derecha">
+          <input
+            type="submit"
+            value="Calcular"
+            class="boton"
+            id="calcularPics"
+          />
+        </div>
+      </form>
+      <h3 class="centrar ft2-4">λ / µ < 1</h3>
+      <!-- Resultados -->
+      <div id="resultados" class="resultados"></div>
+    </main>
+
+    <main id="paso-2" class="contenedor seccion">
+      <h2>Datos - M/M/k</h2>
+      <form action="" class="formulario">
+        <div class="campo">
+          <input type="text" placeholder="Ingrese K" id="k" required min="2" />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese λ"
+            id="lambda2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese µ"
+            id="mu2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese N"
+            id="n2"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTE ($/h)"
+            id="cte2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTS ($/h)"
+            id="cts2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTSE ($/h)"
+            id="ctse2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CS ($/h)"
+            id="cs2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese las horas laborables en un día"
+            id="horas2"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="derecha">
+          <input
+            type="submit"
+            value="Calcular"
+            class="boton"
+            id="calcularPicm"
+          />
+        </div>
+      </form>
+      <h3 class="centrar ft2-4">λ / kµ < 1</h3>
+      <!-- Resultados -->
+      <div id="resultados2" class="resultados"></div>
+    </main>
+
+    <main id="paso-3" class="contenedor seccion">
+      <h2>Datos - M/M/1/M/M</h2>
+      <form action="" class="formulario">
+        <div class="campo">
+          <input
+            type="text"
+            placeholder="Ingrese M"
+            id="m"
+            required
+            min="0"
+            max="30"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese λ"
+            id="lambda3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese µ"
+            id="mu3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese N"
+            id="n3"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTE ($/h)"
+            id="cte3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTS ($/h)"
+            id="cts3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTSE ($/h)"
+            id="ctse3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CS ($/h)"
+            id="cs3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese las horas laborables en un día"
+            id="horas3"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="derecha">
+          <input
+            type="submit"
+            value="Calcular"
+            class="boton"
+            id="calcularPfcs"
+          />
+        </div>
+      </form>
+      <h3 class="centrar ft2-4">λ / µ < 1</h3>
+      <!-- Resultados -->
+      <div id="resultados3" class="resultados"></div>
+    </main>
+
+    <main id="paso-4" class="contenedor seccion">
+      <h2>Datos - M/M/k/M/M</h2>
+      <form action="" class="formulario">
+        <div class="campo">
+          <input
+            type="text"
+            placeholder="Ingrese M"
+            id="m2"
+            required
+            min="0"
+            max="30"
+          />
+        </div>
+
+        <div class="campo">
+          <input type="text" placeholder="Ingrese K" id="k2" required min="2" />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese λ"
+            id="lambda4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese µ"
+            id="mu4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese N"
+            id="n4"
+            required
+            min="0"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTE ($/h)"
+            id="cte4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTS ($/h)"
+            id="cts4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CTSE ($/h)"
+            id="ctse4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese CS ($/h)"
+            id="cs4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="campo">
+          <input
+            type="number"
+            placeholder="Ingrese las horas laborables en un día"
+            id="horas4"
+            required
+            min="0"
+            step="0.01"
+          />
+        </div>
+
+        <div class="derecha">
+          <input
+            type="submit"
+            value="Calcular"
+            class="boton"
+            id="calcularPfcm"
+          />
+        </div>
+      </form>
+      <h3 class="centrar ft2-4">λ / kµ < 1</h3>
+      <!-- Resultados -->
+      <div id="resultados4" class="resultados"></div>
+    </main>
+
+    <div class="contenedor paginacion">
+      <button id="anterior" class="boton">&laquo; Anterior</button>
+      <button id="siguiente" class="boton">Siguiente &raquo;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script
+      src="https://kit.fontawesome.com/1723d7e855.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

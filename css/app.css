@@ -1,0 +1,263 @@
+/* Variables */
+:root {
+  --fuenteHeadings: "Krub", sans-serif;
+  --fuenteTextos: "Roboto", sans-serif;
+  --negro: #000;
+  --blanco: #fff;
+  --gris: #eaeaea;
+}
+
+/* Globales */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background: rgb(74, 69, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(74, 69, 164, 1) 0%,
+    rgba(162, 162, 191, 1) 40%,
+    rgba(97, 162, 176, 1) 100%
+  );
+  font-family: var(--fuenteTextos);
+  font-size: 1.6rem;
+  line-height: 2;
+}
+p {
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.contenedor {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+h1,
+h2,
+h3,
+a {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: var(--blanco);
+}
+h1 {
+  font-size: 3.6rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.4rem;
+  margin: 3rem 0;
+}
+span {
+  font-weight: bold;
+}
+i {
+  margin: 2rem 0;
+}
+input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var(--gris);
+}
+input:disabled {
+  cursor: no-drop;
+}
+button {
+  border: none;
+}
+/* Resultados */
+.resultados {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .resultados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.resultados p {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  font-size: 2.1rem;
+  color: var(--negro);
+  background-color: var(--gris);
+  border-radius: 0.5rem;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+}
+.resultados p:hover {
+  color: var(--blanco);
+  background-color: rgb(79, 125, 79);
+  cursor: pointer;
+}
+
+/* Utilidades */
+.derecha {
+  display: flex;
+  justify-content: flex-end;
+}
+.centrar {
+  text-align: center;
+}
+.sub {
+  font-size: 1.4rem;
+}
+
+/* Botones */
+.boton {
+  display: block;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: var(--blanco);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background-color: var(--negro);
+  font-weight: bold;
+}
+.boton:hover {
+  cursor: pointer;
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: 18rem;
+  }
+}
+
+/* Barra con iconos fontawesome */
+.barra {
+  margin: 0.8rem 0;
+  align-items: center;
+}
+.barra i {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .barra {
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.4rem;
+  }
+  #mobile-menu {
+    display: none;
+  }
+}
+
+/* Navegacion */
+.nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-in;
+}
+@media (min-width: 768px) {
+  .nav {
+    overflow: visible;
+    max-height: 30rem;
+  }
+  h2 {
+    margin: 1.6rem 0 3.6rem 0;
+  }
+}
+/* Mostrar menu mobile */
+.nav.mostrar {
+  max-height: 30rem; /* Establece la altura máxima deseada para el menú */
+  transition: max-height 0.8s ease-in;
+}
+.nav a {
+  display: block;
+  text-align: center;
+  padding: 2rem 4.9rem;
+  font-weight: bold;
+}
+
+/* Mostrar secciones segun el tab */
+.seccion {
+  display: none;
+}
+.mostrarSeccion {
+  display: block;
+}
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.nav .actual {
+  background-color: var(--gris);
+  color: var(--negro);
+  transition-property: background-color;
+  transition-duration: 400ms;
+}
+/* Formulario */
+.formulario {
+  margin-top: 2.6rem;
+}
+.campo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.campo input {
+  /* flex: 1; */
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+/* Paginacion */
+.paginacion {
+  display: block;
+}
+.paginacion button {
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .paginacion {
+    display: flex;
+    justify-content: space-between;
+  }
+  .paginacion button {
+    margin: 0;
+  }
+}
+/* Ocultar boton segun la pagina */
+.ocultar {
+  visibility: hidden;
+}
