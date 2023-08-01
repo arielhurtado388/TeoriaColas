@@ -157,7 +157,7 @@ function calcularPics() {
       CTTS = lambda * horas * w * cts;
       CTTSE = lambda * horas * (1 / mu) * ctse;
       CTS = cs;
-      CT = CTTE + CTTSE + CTTSE + CTS;
+      CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
       <p> <span> ρ = </span> ${p.toFixed(2)} </p>
@@ -258,7 +258,7 @@ function calcularPicm() {
       CTTS = lambda * horas * w * cts;
       CTTSE = lambda * horas * (1 / mu) * ctse;
       CTS = k * cs;
-      CT = CTTE + CTTSE + CTTSE + CTS;
+      CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
       <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
@@ -334,7 +334,7 @@ function calcularPfcs() {
       CTTS = lambda * horas * w * cts;
       CTTSE = lambda * horas * (1 / mu) * ctse;
       CTS = cs;
-      CT = CTTE + CTTSE + CTTSE + CTS;
+      CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
       <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
@@ -407,7 +407,7 @@ function calcularPfcm() {
       CTTS = lambda * horas * w * cts;
       CTTSE = lambda * horas * (1 / mu) * ctse;
       CTS = k * cs;
-      CT = CTTE + CTTSE + CTTSE + CTS;
+      CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
       <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
