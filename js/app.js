@@ -160,22 +160,22 @@ function calcularPics() {
       CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
-      <p> <span> ρ = </span> ${p.toFixed(2)} </p>
-      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
-      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(2)} </p>
-      <p> <span> L = </span> ${l.toFixed(2)} </p>
-      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(2)} </p>
-      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(2)} </p>
-      <p> <span> W = </span> ${w.toFixed(2)} </p>
-      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(2)} </p>
-      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(2)} </p>
+      <p> <span> ρ = </span> ${p.toFixed(4)} </p>
+      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(4)} </p>
+      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(4)} </p>
+      <p> <span> L = </span> ${l.toFixed(4)} </p>
+      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(4)} </p>
+      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(4)} </p>
+      <p> <span> W = </span> ${w.toFixed(4)} </p>
+      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(4)} </p>
+      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(4)} </p>
       <p> <span> CT<span class="sub">TSE</span> = </span> ${CTTSE.toFixed(
         2
       )} </p>
-      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(2)} </p>
-      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(2)} </p>
+      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(4)} </p>
+      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(4)} </p>
 
       `;
     } else {
@@ -261,23 +261,23 @@ function calcularPicm() {
       CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
-      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
-      <p> <span> P<span class="sub">k</span> = </span> ${pk.toFixed(2)} </p>
-      <p> <span> P<span class="sub">NE</span> = </span> ${pne.toFixed(2)} </p>
-      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(2)} </p>
-      <p> <span> L = </span> ${l.toFixed(2)} </p>
-      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(2)} </p>
-      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(2)} </p>
-      <p> <span> W = </span> ${w.toFixed(2)} </p>
-      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(2)} </p>
-      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(2)} </p>
+      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(4)} </p>
+      <p> <span> P<span class="sub">k</span> = </span> ${pk.toFixed(4)} </p>
+      <p> <span> P<span class="sub">NE</span> = </span> ${pne.toFixed(4)} </p>
+      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(4)} </p>
+      <p> <span> L = </span> ${l.toFixed(4)} </p>
+      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(4)} </p>
+      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(4)} </p>
+      <p> <span> W = </span> ${w.toFixed(4)} </p>
+      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(4)} </p>
+      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(4)} </p>
       <p> <span> CT<span class="sub">TSE</span> = </span> ${CTTSE.toFixed(
         2
       )} </p>
-      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(2)} </p>
-      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(2)} </p>
+      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(4)} </p>
+      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(4)} </p>
 
       `;
     } else {
@@ -337,22 +337,22 @@ function calcularPfcs() {
       CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
-      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
-      <p> <span> P<span class="sub">E</span> = </span> ${pe.toFixed(2)} </p>
-      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(2)} </p>
-      <p> <span> L = </span> ${l.toFixed(2)} </p>
-      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(2)} </p>
-      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(2)} </p>
-      <p> <span> W = </span> ${w.toFixed(2)} </p>
-      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(2)} </p>
-      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(2)} </p>
+      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(4)} </p>
+      <p> <span> P<span class="sub">E</span> = </span> ${pe.toFixed(4)} </p>
+      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(4)} </p>
+      <p> <span> L = </span> ${l.toFixed(4)} </p>
+      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(4)} </p>
+      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(4)} </p>
+      <p> <span> W = </span> ${w.toFixed(4)} </p>
+      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(4)} </p>
+      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(4)} </p>
       <p> <span> CT<span class="sub">TSE</span> = </span> ${CTTSE.toFixed(
         2
       )} </p>
-      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(2)} </p>
-      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(2)} </p>
+      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(4)} </p>
+      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(4)} </p>
 
       `;
     } else {
@@ -410,23 +410,23 @@ function calcularPfcm() {
       CT = CTTE + CTTS + CTTSE + CTS;
 
       resultados.innerHTML = `
-      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(2)} </p>
-      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(2)} </p>
-      <p> <span> P<span class="sub">E</span> = </span> ${pe.toFixed(2)} </p>
-      <p> <span> P<span class="sub">NE</span> = </span> ${pne.toFixed(2)} </p>
-      <p> <span> L = </span> ${l.toFixed(2)} </p>
-      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(2)} </p>
-      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(2)} </p>
-      <p> <span> W = </span> ${w.toFixed(2)} </p>
-      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(2)} </p>
-      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(2)} </p>
-      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(2)} </p>
+      <p> <span> P<span class="sub">0</span> = </span> ${p0.toFixed(4)} </p>
+      <p> <span> P<span class="sub">n</span> = </span> ${pn.toFixed(4)} </p>
+      <p> <span> P<span class="sub">E</span> = </span> ${pe.toFixed(4)} </p>
+      <p> <span> P<span class="sub">NE</span> = </span> ${pne.toFixed(4)} </p>
+      <p> <span> L = </span> ${l.toFixed(4)} </p>
+      <p> <span> L<span class="sub">q</span> = </span> ${lq.toFixed(4)} </p>
+      <p> <span> L<span class="sub">n</span> = </span> ${ln.toFixed(4)} </p>
+      <p> <span> W = </span> ${w.toFixed(4)} </p>
+      <p> <span> W<span class="sub">q</span> = </span> ${wq.toFixed(4)} </p>
+      <p> <span> W<span class="sub">n</span> = </span> ${wn.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TE</span> = </span> ${CTTE.toFixed(4)} </p>
+      <p> <span> CT<span class="sub">TS</span> = </span> ${CTTS.toFixed(4)} </p>
       <p> <span> CT<span class="sub">TSE</span> = </span> ${CTTSE.toFixed(
         2
       )} </p>
-      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(2)} </p>
-      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(2)} </p>
+      <p> <span> CT<span class="sub">S</span> = </span> ${CTS.toFixed(4)} </p>
+      <p> <span> CT<span class="sub"></span> = </span> ${CT.toFixed(4)} </p>
 
       `;
     } else {
