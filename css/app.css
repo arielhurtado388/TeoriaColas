@@ -71,9 +71,11 @@ span {
 #mobile-menu {
   display: flex;
   justify-content: center;
-  width: 5rem;
-  height:5rem;
   margin: 2rem 0;
+}
+#mobile-menu svg{
+  width: 4rem;
+  height:4rem;
 }
 input {
   margin: 0;
