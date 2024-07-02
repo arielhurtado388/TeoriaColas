@@ -185,7 +185,7 @@ button {
   /* display: none; */
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.8s ease-in;
+  transition: max-height 0.5s ease-in;
 }
 @media (min-width: 768px) {
   .nav {
@@ -199,7 +199,7 @@ button {
 /* Mostrar menu mobile */
 .nav.mostrar {
   max-height: 30rem; /* Establece la altura máxima deseada para el menú */
-  transition: max-height 0.8s ease-in;
+  transition: max-height 0.5s ease-in;
 }
 .nav a {
   display: block;
