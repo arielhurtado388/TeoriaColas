@@ -68,7 +68,11 @@ h3 {
 span {
   font-weight: bold;
 }
-i {
+#mobile-menu {
+  display: flex;
+  justify-content: center;
+  width: 5rem;
+  height:5rem;
   margin: 2rem 0;
 }
 input {
